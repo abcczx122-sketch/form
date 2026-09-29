@@ -1,0 +1,125 @@
+
+.login{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(background.jpg);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.wrapper{
+    position: relative;
+    width: clamp(200px,31.5vw,500px);
+    height: clamp(250px,34.4vw,500px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+backdrop-filter: blur(20px);
+border-radius: 20px 20px;
+display: flex;
+overflow: hidden;
+}
+.form-box{
+    width: 100%;
+}
+.form-box h2{
+    font-size: clamp(20px,3vw,40px);
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 90%;
+    
+    height: 40px;
+    border-bottom: 2px solid black;
+    margin: 30px 20px;
+   
+}
+.input-box label{
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    color: white;
+    transform: translateY(-40px);
+    font-size: 20px;
+    transition: 0.6s;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: -2px;
+    font-size: 20px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.remember-forgot{
+    margin:0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.remember-forgot a{
+    text-decoration: none;
+    color: black;
+
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.btn,.btns{
+    width: 70%;
+    height: 38px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px 10px;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.login-register{
+    text-align: center;
+}
+.login-register a{
+    text-decoration: none;
+    color: black;
+}
+.login-register a:hover{
+    text-decoration: underline;
+}
+.wrapper .logins {
+    padding-top: 40px;
+    transform: translateX(0);
+    transition: transform 0.6s ease;
+}
+
+.wrapper .Registers {
+    position: absolute;
+    transform: translateX(600px);
+    transition: transform 0.6s ease;
+}
+
+.wrapper.active .logins {
+    transform: translateX(-600px);
+}
+
+.wrapper.active .Registers {
+    transform: translateX(0);
+}
+.input-box .span{
+    visibility: hidden;
+    
+    font-size: 13px;
+}
+.input-box.error .span{
+    visibility: visible;
+    color: red;
+}
